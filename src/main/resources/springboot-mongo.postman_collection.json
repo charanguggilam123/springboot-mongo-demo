@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "4ec419a1-7624-4d5f-9e40-8951571c9635",
+		"name": "springboot-mongo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Photo",
+			"item": [
+				{
+					"name": "Add photo (binary)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/sguggilam/Pictures/open api 2 vs 3.PNG"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/photo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"photo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get photo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/sguggilam/Pictures/open api 2 vs 3.PNG"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/photo/639c40c56ffa3c7610ab7e0b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"photo",
+								"639c40c56ffa3c7610ab7e0b"
+							]
+						},
+						"description": "Works better when invoked from browser"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get User - criteria",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Srinivasa Rao\",\r\n    \"hobbies\":[\"Eating\",\"Riding\",\"Sudoku\"],\r\n    \"address\":{\r\n        \"firstLine\":\"223\",\r\n        \"secondLine\":\"Secret Lane\",\r\n        \"street\": \"Mystery Street\",\r\n        \"postalCode\":51236\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/criteria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"criteria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user - oldest in area",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Srinivasa Rao\",\r\n    \"hobbies\":[\"Eating\",\"Riding\",\"Sudoku\"],\r\n    \"address\":{\r\n        \"firstLine\":\"223\",\r\n        \"secondLine\":\"Secret Lane\",\r\n        \"street\": \"Mystery Street\",\r\n        \"postalCode\":51236\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/oldest-in-area",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"oldest-in-area"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5,\r\n    \"fullName\": \"Prasad\",\r\n    \"hobbies\":[\"Investing\"],\r\n    \"address\":{\r\n        \"firstLine\":\"223\",\r\n        \"secondLine\":\"Secret Lane\",\r\n        \"street\": \"Mystery Street\",\r\n        \"postalCode\":508207\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get hobbies data count",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Srinivasa Rao\",\r\n    \"hobbies\":[\"Eating\",\"Riding\",\"Sudoku\"],\r\n    \"address\":{\r\n        \"firstLine\":\"223\",\r\n        \"secondLine\":\"Secret Lane\",\r\n        \"street\": \"Mystery Street\",\r\n        \"postalCode\":51236\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/hobbies-data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"hobbies-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get users based on range of id's",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Srinivasa Rao\",\r\n    \"hobbies\":[\"Eating\",\"Riding\",\"Sudoku\"],\r\n    \"address\":{\r\n        \"firstLine\":\"223\",\r\n        \"secondLine\":\"Secret Lane\",\r\n        \"street\": \"Mystery Street\",\r\n        \"postalCode\":51236\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/fetch?max=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"fetch"
+					],
+					"query": [
+						{
+							"key": "min",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "max",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Srinivasa Rao\",\r\n    \"designation\": \"Lead\",\r\n    \"email\": \"gsrao@gmail.com\",\r\n    \"mobileNumber\":\"1298798790\",\r\n    \"country\":\"India\",\r\n    \"countryCode\":\"IN\",\r\n    \"address\":{\r\n        \"firstLine\":\"223\",\r\n        \"secondLine\":\"Secret Lane\",\r\n        \"addressLine3\":\"SOmething not in POJO\",\r\n        \"street\": \"Mystery Street\",\r\n        \"postalCode\":51236\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/fetchAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"fetchAll"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
